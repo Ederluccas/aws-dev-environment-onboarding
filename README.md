@@ -162,6 +162,9 @@ O perfil recomendado para trabalhar com AWS e Terraform no VS Code é o
 `aws-devops`. Ele mantém apenas as extensões que fazem sentido no dia a dia
 com nuvem e infraestrutura como código.
 
+Este repositório também inclui [recomendações do workspace](.vscode/extensions.json)
+para o VS Code sugerir automaticamente esse conjunto ao abrir o projeto.
+
 ### Extensões do perfil `aws-devops`
 
 - AWS Toolkit  

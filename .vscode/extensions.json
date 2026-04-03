@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "amazonwebservices.aws-toolkit-vscode",
+    "hashicorp.terraform",
+    "hashicorp.hcl",
+    "redhat.vscode-yaml",
+    "eamodio.gitlens",
+    "ms-azuretools.vscode-docker"
+  ],
+  "unwantedRecommendations": [
+    "dbaeumer.vscode-eslint",
+    "github.copilot"
+  ]
+}
