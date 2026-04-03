@@ -27,5 +27,6 @@ jobs:
       - name: Verificar Markdown
         uses: DavidAnson/markdownlint-cli2-action@v18
         with:
+          config: .markdownlint-cli2.jsonc
           globs: |
             **/*.md
