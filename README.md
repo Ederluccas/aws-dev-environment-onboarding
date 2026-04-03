@@ -169,6 +169,14 @@ As configurações mínimas do workspace ficam em
 [.vscode/settings.json](.vscode/settings.json) e ajudam a padronizar
 Terraform e YAML no editor.
 
+### Como usar no VS Code
+
+1. Abra a pasta do repositório no VS Code.
+2. Aceite as extensões recomendadas do workspace quando o editor sugerir.
+3. Se quiser instalar tudo manualmente, execute
+  `VSCODE_PROFILE=aws-devops bash scripts/install_vscode.sh`.
+4. Se precisar de mais ferramentas, troque para o perfil `full`.
+
 ### Extensões do perfil `aws-devops`
 
 - AWS Toolkit  
