@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "terraform.codelens.terraform": true,
+  "terraform.codelens.run": true,
+  "yaml.validate": true,
+  "yaml.format.enable": true,
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
+}

@@ -165,6 +165,10 @@ com nuvem e infraestrutura como código.
 Este repositório também inclui [recomendações do workspace](.vscode/extensions.json)
 para o VS Code sugerir automaticamente esse conjunto ao abrir o projeto.
 
+As configurações mínimas do workspace ficam em
+[.vscode/settings.json](.vscode/settings.json) e ajudam a padronizar
+Terraform e YAML no editor.
+
 ### Extensões do perfil `aws-devops`
 
 - AWS Toolkit  
