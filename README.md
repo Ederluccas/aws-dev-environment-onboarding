@@ -137,6 +137,14 @@ git push
 
 ---
 
+## 🧹 Lint de Markdown
+
+Este repositório usa uma configuração local do `markdownlint-cli2` em
+[.markdownlint-cli2.jsonc](.markdownlint-cli2.jsonc) para evitar falhas por
+limite de linha em textos longos da documentação.
+
+---
+
 ## 📁 Estrutura do Projeto
 
 ```text
