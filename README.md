@@ -1,14 +1,17 @@
 # 🚀 AWS Dev Environment Onboarding
 
-Configuração automatizada de onboarding para um **ambiente de desenvolvimento AWS pronto para uso corporativo**.
+Configuração automatizada de onboarding para um
+**ambiente de desenvolvimento AWS pronto para uso corporativo**.
 
 ---
 
 ## 🏢 Visão Geral
 
-Este projeto oferece uma forma padronizada de configurar um ambiente local para fluxos de trabalho baseados em AWS.
+Este projeto oferece uma forma padronizada de configurar um ambiente local
+para fluxos de trabalho baseados em AWS.
 
-Ele reduz o tempo de onboarding e garante consistência entre times ao automatizar a instalação de ferramentas essenciais.
+Ele reduz o tempo de onboarding e garante consistência entre times ao
+automatizar a instalação de ferramentas essenciais.
 
 > Inspirado em práticas reais de DevOps e Engenharia de Cloud.
 
@@ -20,7 +23,8 @@ Ele reduz o tempo de onboarding e garante consistência entre times ao automatiz
 - Eliminar erros de configuração manual
 - Permitir configurações reproduzíveis
 
-De acordo com boas práticas da AWS, configurar corretamente a CLI e o ambiente é essencial para interagir programaticamente com os serviços AWS.
+De acordo com boas práticas da AWS, configurar corretamente a CLI e o ambiente
+é essencial para interagir programaticamente com os serviços AWS.
 
 ---
 
@@ -55,7 +59,8 @@ AWS CLI + Terraform
 ↓  
 Conta AWS (acesso baseado em SSO)
 
-Ambientes modernos devem ser reproduzíveis e automatizados, evitando configuração manual e inconsistências.
+Ambientes modernos devem ser reproduzíveis e automatizados, evitando
+configuração manual e inconsistências.
 
 ---
 
@@ -87,7 +92,8 @@ aws configure sso
 
 ### Diferenças rápidas
 
-- `branch`: linha paralela de trabalho para isolar mudanças sem afetar a principal.
+- `branch`: linha paralela de trabalho para isolar mudanças sem afetar a
+  principal.
 - `commit`: registro local e versionado de um conjunto de alterações.
 - `push`: envio dos commits locais para o repositório remoto.
 
@@ -120,7 +126,8 @@ git push
 
 - Use `branch` quando começar uma funcionalidade, correção ou experimento.
 - Use `commit` quando terminar uma etapa lógica do trabalho.
-- Use `push` quando quiser publicar os commits no GitHub e abrir ou atualizar um PR.
+- Use `push` quando quiser publicar os commits no GitHub e abrir ou
+  atualizar um PR.
 
 ### Boas práticas
 
@@ -143,49 +150,54 @@ docs/           -> Documentação
 
 ## 💻 Extensões VS Code (Recomendadas)
 
-Para garantir um ambiente de desenvolvimento produtivo e padronizado, instale as seguintes extensões do Visual Studio Code:
+Para garantir um ambiente de desenvolvimento produtivo e padronizado,
+instale as seguintes extensões do Visual Studio Code:
 
 ### ☁️ Cloud & AWS
 
 - AWS Toolkit  
-	-> Gerencie recursos AWS, execute funções Lambda e interaja com serviços diretamente pelo editor
+  -> Gerencie recursos AWS, execute funções Lambda e interaja com
+     serviços diretamente pelo editor
 
 ---
 
 ### 🧠 Infraestrutura como Código
 
 - Terraform (HashiCorp)  
-	-> Destaque de sintaxe, IntelliSense, validação, formatação e integração de comandos Terraform
+  -> Destaque de sintaxe, IntelliSense, validação, formatação e
+     integração de comandos Terraform
 
 - HCL (HashiCorp Configuration Language)  
-	-> Suporte para configurações baseadas em HashiCorp (Terraform, Vault, Consul)
+  -> Suporte para configurações baseadas em HashiCorp
+     (Terraform, Vault, Consul)
 
 ---
 
 ### 🔧 DevOps & Produtividade
 
 - Docker  
-	-> Gerencie containers e Dockerfiles
+  -> Gerencie containers e Dockerfiles
 
 - YAML (RedHat)  
-	-> Validação e auto-completar para YAML (muito usado em CI/CD e Kubernetes)
+  -> Validação e auto-completar para YAML (muito usado em CI/CD e
+     Kubernetes)
 
 - GitLens  
-	-> Recursos avançados de Git e rastreamento de histórico
+  -> Recursos avançados de Git e rastreamento de histórico
 
 ---
 
 ### 🧪 Qualidade de Código
 
 - ESLint  
-	-> Lint para JavaScript/TypeScript (comum em aplicações cloud)
+  -> Lint para JavaScript/TypeScript (comum em aplicações cloud)
 
 ---
 
 ### 🤖 IA & Aumento de Produtividade
 
 - GitHub Copilot  
-	-> Assistência de código com IA para desenvolvimento mais rápido
+  -> Assistência de código com IA para desenvolvimento mais rápido
 
 ---
 
@@ -222,7 +234,8 @@ bash scripts/install_terminal.sh
 
 Variáveis úteis em `config/.env`:
 
-- `SKIP_TERMINAL_SETUP=true` para pular a configuração de terminal no setup completo
+- `SKIP_TERMINAL_SETUP=true` para pular a configuração de terminal no
+  setup completo
 - `ZSH_SET_DEFAULT=true` para tentar definir o zsh como shell padrão
 
 ---
@@ -252,10 +265,10 @@ Se quiser deixar nível empresa mesmo, adicione também:
 ### 🔐 Segurança & Custos (Avançado)
 
 - Checkov  
-	-> Scanner de segurança para Terraform
+  -> Scanner de segurança para Terraform
 
 - Infracost  
-	-> Estimativa de custos AWS diretamente no código
+  -> Estimativa de custos AWS diretamente no código
 
 ---
 

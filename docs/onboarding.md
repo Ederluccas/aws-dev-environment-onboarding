@@ -1,6 +1,7 @@
 # Guia de Onboarding
 
-Este guia ajuda desenvolvedores a preparar um ambiente local de desenvolvimento AWS usando os scripts deste repositório.
+Este guia ajuda desenvolvedores a preparar um ambiente local de
+desenvolvimento AWS usando os scripts deste repositório.
 
 ## Pré-requisitos
 
