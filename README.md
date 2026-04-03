@@ -156,20 +156,17 @@ docs/           -> Documentação
 
 ---
 
-## 💻 Extensões VS Code (Recomendadas)
+## 💻 Perfil VS Code AWS/DEVOPS
 
-Para garantir um ambiente de desenvolvimento produtivo e padronizado,
-instale as seguintes extensões do Visual Studio Code:
+O perfil recomendado para trabalhar com AWS e Terraform no VS Code é o
+`aws-devops`. Ele mantém apenas as extensões que fazem sentido no dia a dia
+com nuvem e infraestrutura como código.
 
-### ☁️ Cloud & AWS
+### Extensões do perfil `aws-devops`
 
 - AWS Toolkit  
   -> Gerencie recursos AWS, execute funções Lambda e interaja com
      serviços diretamente pelo editor
-
----
-
-### 🧠 Infraestrutura como Código
 
 - Terraform (HashiCorp)  
   -> Destaque de sintaxe, IntelliSense, validação, formatação e
@@ -178,10 +175,6 @@ instale as seguintes extensões do Visual Studio Code:
 - HCL (HashiCorp Configuration Language)  
   -> Suporte para configurações baseadas em HashiCorp
      (Terraform, Vault, Consul)
-
----
-
-### 🔧 DevOps & Produtividade
 
 - Docker  
   -> Gerencie containers e Dockerfiles
@@ -193,25 +186,25 @@ instale as seguintes extensões do Visual Studio Code:
 - GitLens  
   -> Recursos avançados de Git e rastreamento de histórico
 
----
+### Modo completo opcional
 
-### 🧪 Qualidade de Código
-
-- ESLint  
-  -> Lint para JavaScript/TypeScript (comum em aplicações cloud)
-
----
-
-### 🤖 IA & Aumento de Produtividade
-
-- GitHub Copilot  
-  -> Assistência de código com IA para desenvolvimento mais rápido
-
----
+Se você também quiser ESLint e GitHub Copilot, use o perfil `full`.
 
 ## ⚙️ Instalação via CLI
 
-Você pode instalar todas as extensões recomendadas com:
+Instale o perfil padrão com:
+
+```bash
+VSCODE_PROFILE=aws-devops bash scripts/install_vscode.sh
+```
+
+Para instalar o perfil completo:
+
+```bash
+VSCODE_PROFILE=full bash scripts/install_vscode.sh
+```
+
+Se preferir instalar extensões individualmente, use:
 
 ```bash
 code --install-extension amazonwebservices.aws-toolkit-vscode

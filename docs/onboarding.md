@@ -16,6 +16,7 @@ desenvolvimento AWS usando os scripts deste repositório.
 3. Execute o script de setup.
 4. Configure as credenciais de AWS SSO.
 5. (Opcional) Ajuste o shell padrão para zsh.
+6. Use o perfil `aws-devops` no VS Code.
 
 ## Comandos
 
@@ -26,6 +27,7 @@ chmod +x scripts/*.sh
 ./scripts/setup.sh
 aws configure sso
 chsh -s "$(command -v zsh)" "$USER"
+VSCODE_PROFILE=aws-devops bash scripts/install_vscode.sh
 ```
 
 ## Validação

@@ -4,7 +4,9 @@ set -euo pipefail
 
 echo "💻 Configurando Visual Studio Code..."
 
-if [[ "${VSCODE_EXTENSIONS_ONLY:-false}" == "true" && ! $(command -v code >/dev/null 2>&1; echo $?) -eq 0 ]]; then
+VSCODE_PROFILE="${VSCODE_PROFILE:-aws-devops}"
+
+if [[ "${VSCODE_EXTENSIONS_ONLY:-false}" == "true" ]] && ! command -v code >/dev/null 2>&1; then
   echo "⚠️ VSCODE_EXTENSIONS_ONLY=true, mas o comando 'code' não está disponível."
   echo "👉 Instale/habilite o comando 'code' no VS Code e execute novamente."
   exit 1
@@ -29,14 +31,20 @@ else
   echo "✅ VS Code já instalado"
 fi
 
-echo "🔌 Instalando extensões..."
+echo "🔌 Instalando extensões do perfil ${VSCODE_PROFILE}..."
 
-EXTENSIONS_CLOUD=(
+EXTENSIONS_AWS_DEVOPS=(
   "amazonwebservices.aws-toolkit-vscode"
   "hashicorp.terraform"
+  "hashicorp.hcl"
+  "redhat.vscode-yaml"
+  "eamodio.gitlens"
+  "ms-azuretools.vscode-docker"
 )
 
-EXTENSIONS_DEV=(
+EXTENSIONS_FULL=(
+  "amazonwebservices.aws-toolkit-vscode"
+  "hashicorp.terraform"
   "hashicorp.hcl"
   "ms-azuretools.vscode-docker"
   "redhat.vscode-yaml"
@@ -45,7 +53,20 @@ EXTENSIONS_DEV=(
   "github.copilot"
 )
 
-EXTENSIONS=("${EXTENSIONS_CLOUD[@]}" "${EXTENSIONS_DEV[@]}")
+case "${VSCODE_PROFILE}" in
+  aws-devops)
+    EXTENSIONS=("${EXTENSIONS_AWS_DEVOPS[@]}")
+    ;;
+  full)
+    EXTENSIONS=("${EXTENSIONS_FULL[@]}")
+    ;;
+  *)
+    echo "❌ Perfil de VS Code desconhecido: ${VSCODE_PROFILE}"
+    echo "👉 Use: aws-devops ou full"
+    exit 1
+    ;;
+esac
+
 INSTALLED_EXTENSIONS="$(code --list-extensions)"
 
 for ext in "${EXTENSIONS[@]}"; do
