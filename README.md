@@ -174,7 +174,7 @@ Terraform e YAML no editor.
 1. Abra a pasta do repositório no VS Code.
 2. Aceite as extensões recomendadas do workspace quando o editor sugerir.
 3. Se quiser instalar tudo manualmente, execute
-  `VSCODE_PROFILE=aws-devops bash scripts/install_vscode.sh`.
+   `VSCODE_PROFILE=aws-devops bash scripts/install_vscode.sh`.
 4. Se precisar de mais ferramentas, troque para o perfil `full`.
 
 ### Extensões do perfil `aws-devops`
@@ -204,6 +204,13 @@ Terraform e YAML no editor.
 ### Modo completo opcional
 
 Se você também quiser ESLint e GitHub Copilot, use o perfil `full`.
+
+### Comparativo rápido
+
+| Perfil | Inclui | Quando usar |
+| --- | --- | --- |
+| `aws-devops` | AWS Toolkit, Terraform, HCL, Docker, YAML, GitLens | Uso diário com AWS, Terraform e infraestrutura |
+| `full` | Tudo do `aws-devops` + ESLint + GitHub Copilot | Quando você também trabalha com frontend, Node.js ou quer IA no editor |
 
 ## ⚙️ Instalação via CLI
 
